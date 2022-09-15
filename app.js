@@ -109,7 +109,7 @@ app.delete('/produtos/:id', (req, res) => {
     )
 
     if(indiceProduto >= 0){
-        const produtoDeletado = produtos.slice(indiceProduto, 1)
+        const produtoDeletado = produtos.slice(indiceProduto, 1)[0]
         return res.json(produtoDeletado);
     }
     else{
